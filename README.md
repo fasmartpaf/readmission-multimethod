@@ -96,3 +96,38 @@ under its own terms; please cite Strack et al. (2014) and the UCI repository.
 ## How to cite
 
 If you use this code, please cite the paper and this repository (see `CITATION.cff`).
+
+## Advanced analyses (revised manuscript)
+
+These scripts reproduce the additional experiments added in the revised paper
+(run after `prep.py` has produced `results/X.npy` and `results/y.npy`):
+
+```bash
+python adv1.py        # SOTA holdout metrics, bootstrap AUC CIs, paired significance, calibration data
+python adv2.py        # stratified 5-fold CV with 95% CIs (LR, RF, HistGradientBoosting)
+python adv3a_shap.py  # SHAP feature importance (vs impurity importance)
+python adv3b_fair.py  # subgroup / fairness analysis (age, sex, race)
+python cal_dca.py     # Platt/isotonic recalibration + decision-curve analysis
+python nested_cv.py   # LightGBM tuned via nested 5x3-fold cross-validation
+```
+
+Requires additionally: `lightgbm`, `shap` (see below). Results are written to
+`results/*.json` and figures to `figures/`.
+
+Key reproduced findings (deterministic, seed = 42):
+- Best discrimination ROC-AUC ~0.65; gradient boosting (HistGradientBoosting and tuned
+  LightGBM, nested-CV AUC 0.655 ± 0.010) is NOT significantly better than Logistic
+  Regression (paired-bootstrap p = 0.60); both exceed Random Forest (p < 0.001).
+- Recalibrated model: Brier 0.079; decision-curve analysis shows net benefit across
+  threshold probabilities ~0.04–0.50.
+- SHAP elevates age and prior inpatient visits, correcting impurity-importance bias.
+- Subgroup AUC stable by sex (~0.65), 0.65–0.74 by race; age-dependent operating points.
+
+Note: where the LightGBM library is unavailable, scikit-learn's HistGradientBoosting is
+used as the algorithmically equivalent gradient-boosting model. XGBoost was not run.
+
+## Additional requirements (advanced analyses)
+```
+lightgbm>=4.0
+shap>=0.44
+```

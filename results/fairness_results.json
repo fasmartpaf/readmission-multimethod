@@ -1,0 +1,105 @@
+{
+ "threshold": 0.493,
+ "overall": {
+  "n": 13998,
+  "prevalence": 0.09,
+  "roc_auc": 0.654,
+  "recall": 0.529,
+  "fpr": 0.303,
+  "selection_rate": 0.324
+ },
+ "by_age": {
+  "<45": {
+   "n": 2270,
+   "prevalence": 0.066,
+   "roc_auc": 0.649,
+   "recall": 0.349,
+   "fpr": 0.121,
+   "selection_rate": 0.136
+  },
+  "45-64": {
+   "n": 5651,
+   "prevalence": 0.083,
+   "roc_auc": 0.64,
+   "recall": 0.407,
+   "fpr": 0.229,
+   "selection_rate": 0.244
+  },
+  "65-84": {
+   "n": 5745,
+   "prevalence": 0.105,
+   "roc_auc": 0.65,
+   "recall": 0.665,
+   "fpr": 0.441,
+   "selection_rate": 0.465
+  },
+  "85+": {
+   "n": 332,
+   "prevalence": 0.099,
+   "roc_auc": 0.591,
+   "recall": 0.576,
+   "fpr": 0.512,
+   "selection_rate": 0.518
+  }
+ },
+ "by_gender": {
+  "Female": {
+   "n": 7474,
+   "prevalence": 0.089,
+   "roc_auc": 0.655,
+   "recall": 0.556,
+   "fpr": 0.327,
+   "selection_rate": 0.347
+  },
+  "Male": {
+   "n": 6523,
+   "prevalence": 0.091,
+   "roc_auc": 0.653,
+   "recall": 0.499,
+   "fpr": 0.276,
+   "selection_rate": 0.296
+  }
+ },
+ "by_race": {
+  "AfricanAmerican": {
+   "n": 2554,
+   "prevalence": 0.09,
+   "roc_auc": 0.665,
+   "recall": 0.494,
+   "fpr": 0.263,
+   "selection_rate": 0.283
+  },
+  "Caucasian": {
+   "n": 10451,
+   "prevalence": 0.091,
+   "roc_auc": 0.646,
+   "recall": 0.537,
+   "fpr": 0.319,
+   "selection_rate": 0.339
+  },
+  "Hispanic": {
+   "n": 308,
+   "prevalence": 0.097,
+   "roc_auc": 0.721,
+   "recall": 0.533,
+   "fpr": 0.227,
+   "selection_rate": 0.256
+  },
+  "Missing": {
+   "n": 350,
+   "prevalence": 0.063,
+   "roc_auc": 0.739,
+   "recall": 0.545,
+   "fpr": 0.247,
+   "selection_rate": 0.266
+  },
+  "Other": {
+   "n": 229,
+   "prevalence": 0.048,
+   "roc_auc": 0.743,
+   "recall": 0.636,
+   "fpr": 0.261,
+   "selection_rate": 0.279
+  }
+ }
+}
