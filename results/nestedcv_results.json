@@ -1,0 +1,59 @@
+{
+ "method": "LightGBM (real library) with nested 5x3-fold CV",
+ "nested_cv_auc_mean": 0.6547,
+ "nested_cv_auc_ci95": 0.0103,
+ "outer_fold_aucs": [
+  0.6575,
+  0.6451,
+  0.6552,
+  0.6488,
+  0.6667
+ ],
+ "best_params_per_fold": [
+  {
+   "learning_rate": 0.05,
+   "n_estimators": 150,
+   "num_leaves": 31
+  },
+  {
+   "learning_rate": 0.05,
+   "n_estimators": 150,
+   "num_leaves": 31
+  },
+  {
+   "learning_rate": 0.05,
+   "n_estimators": 150,
+   "num_leaves": 31
+  },
+  {
+   "learning_rate": 0.05,
+   "n_estimators": 150,
+   "num_leaves": 31
+  },
+  {
+   "learning_rate": 0.05,
+   "n_estimators": 150,
+   "num_leaves": 31
+  }
+ ],
+ "scale_pos_weight": 10.136,
+ "grid": {
+  "num_leaves": [
+   31,
+   63
+  ],
+  "learning_rate": [
+   0.05
+  ],
+  "n_estimators": [
+   150
+  ]
+ },
+ "final_best_params": {
+  "learning_rate": 0.05,
+  "n_estimators": 150,
+  "num_leaves": 31
+ },
+ "holdout_auc": 0.6578,
+ "holdout_pr_auc": 0.1831
+}
