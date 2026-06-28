@@ -1,0 +1,5 @@
+data/
+results/*.npy
+results/*.csv
+__pycache__/
+*.pyc

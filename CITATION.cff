@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Multi-Method Analysis of 30-Day Hospital Readmission (code)"
+authors:
+  - family-names: Mukhtiar
+    given-names: Ahmad
+    affiliation: "Department of Software Engineering, Government College University Faisalabad, Pakistan"
+version: 1.0.0
+date-released: 2026-06-28
+license: MIT
+keywords:
+  - hospital readmission
+  - machine learning
+  - class imbalance
+  - patient segmentation
+  - reproducible research
+references:
+  - type: article
+    authors:
+      - family-names: Strack
+        given-names: Beata
+    title: "Impact of HbA1c measurement on hospital readmission rates: analysis of 70,000 clinical database patient records"
+    journal: "BioMed Research International"
+    year: 2014
+    doi: 10.1155/2014/781670

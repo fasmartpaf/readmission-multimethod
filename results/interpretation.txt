@@ -1,0 +1,11 @@
+Risk driver: 30-day readmission rises from 8.1% for patients with no prior inpatient visits to 35.6% for those with five or more, making prior inpatient utilisation the leading actionable risk factor.
+
+Segment 1 (lower-risk, n=22,681): mean age 56, length of stay 2.8 days, 12 medications, 5 diagnoses; 30-day readmission 6.6%.
+
+Segment 0 (intermediate-risk, n=31,768): mean age 71, length of stay 3.6 days, 14 medications, 8 diagnoses; 30-day readmission 9.7%.
+
+Segment 2 (higher-risk, n=15,541): mean age 66, length of stay 7.9 days, 25 medications, 8 diagnoses; 30-day readmission 11.1%.
+
+Best-discriminating model: Logistic Regression (ROC-AUC 0.652, recall 52%). Note that higher-accuracy models are misleading under class imbalance.
+
+Most influential variables (Random Forest): num lab procedures, num medications, time in hospital, number inpatient, age ord.
